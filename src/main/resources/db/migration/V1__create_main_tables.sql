@@ -1,0 +1,10 @@
+CREATE TABLE bookings (
+      id BIGINT AUTO_INCREMENT PRIMARY KEY,
+      user_id VARCHAR(255) NOT NULL,
+      table_id BIGINT NOT NULL,
+      status VARCHAR(50) NOT NULL,
+      booking_time DATETIME NOT NULL,
+      start_time DATETIME NOT NULL,
+      end_time DATETIME NOT NULL,
+      updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);

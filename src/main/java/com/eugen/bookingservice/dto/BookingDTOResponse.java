@@ -1,25 +1,15 @@
-package com.eugen.bookingservice.model;
+package com.eugen.bookingservice.dto;
 
 import com.eugen.bookingservice.dto.enums.BookingStatus;
-import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 
 import java.time.LocalDateTime;
 
-@Table(name = "bookings")
-@Entity
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class Booking {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Data
+public class BookingDTOResponse {
     private Long id;
     private String userId;
     private Long tableId;
-    @Enumerated(EnumType.STRING)
     private BookingStatus status;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
